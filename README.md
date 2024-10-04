@@ -1,12 +1,12 @@
-# EnhancedAutoTyper
+# C Code Typer
 
 EnhancedAutoTyper is a Windows application that simulates human-like typing patterns for automatically inputting text. It uses AI-generated content and advanced typing simulation to create a more natural and realistic typing experience.
 
 ## Features
 
-- AI-powered text generation using Google's Generative AI (Gemini 1.5 Pro)
+- AI-powered coding problem solution generator using Google's Generative AI (Gemini 1.5 Pro)
 - User-friendly graphical interface
-- Screenshot-based input for context-aware text generation
+- Screenshot-based input for context-aware code generation
 - Customizable typing speed (slow, medium, fast)
 - Realistic typing patterns, including common mistakes and corrections
 - Progress tracking and status updates
@@ -28,20 +28,16 @@ EnhancedAutoTyper is a Windows application that simulates human-like typing patt
 
 ## Usage
 
-1. Double-click on EnhancedAutoTyper.exe to launch the application.
-
-2. before you run :
+1. before you run :
    - Obtain an API key from the Google Cloud Console
    - Enter the API key in system environment variable with key name API_KEY and value as your API key
 
-3. Use the GUI to:
-   - Generate text using AI
-   - Customize typing speed
-   - Start the auto-typing process
+2. Double-click on EnhancedAutoTyper.exe to launch the application.
 
-4. When starting the typing process, quickly move your cursor to the desired input field within the given delay time.
-
-5. The program will simulate human-like typing of the generated text.
+3. How it works :
+   - Takes a screenshot of left side of page (where mostly question lies)
+   - Using AI generates the solution of problem
+   - Simulates the human typing
 
 ## Troubleshooting
 

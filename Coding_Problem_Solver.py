@@ -16,6 +16,7 @@ def print_same_line(text):
 
 def capture_left_screen():
     #Capture and save a screenshot of the left half of the screen.
+    time.sleep(1)
     full_screenshot = ImageGrab.grab()
     screen_width, screen_height = full_screenshot.size
     left_side_region = (0, 0, screen_width // 2, screen_height)
@@ -36,14 +37,13 @@ def save_code_to_file(code):
     with open("code.txt", "w") as code_file:
         code_file.write(code)
 def human_typing_simulation():
-    time.sleep(random.uniform(0.2, 0.3))    
-    if random.random() < 0.05:  # 10% chance of adding a random pause
-        time.sleep(random.uniform(1, 3))
-    
+    time.sleep(random.uniform(0.1, 0.2))    
+    if random.random() < 0.01:  # 10% chance of adding a random pause
+        time.sleep(random.uniform(1, 2))
     if random.random() < 0.1:  # 10% chance of simulating a typo
         typo = chr(random.randint(33, 44))
         pyautogui.typewrite(typo)
-        time.sleep(random.uniform(0.1, 0.3))
+        time.sleep(random.uniform(0.1, 0.2))
         pyautogui.press("backspace")
 
 def typing(code):
@@ -52,10 +52,13 @@ def typing(code):
     for line in lines:
         line=line.strip()
         # if line.strip().startswith('#'):
-        #     continue
+        #     continuei
         for char in line:
             if char == ' ':
                 pyautogui.press("space")
+            elif char == '{':
+                pyautogui.press('{')
+                pyautogui.press('delete')
             else:
                 pyautogui.press(char)
             human_typing_simulation()
